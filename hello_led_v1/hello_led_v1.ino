@@ -1,14 +1,15 @@
-/* Die Define-Anweisung wird vor dem Kompilieren des Programms ausgeführt; sie    ersetzt alle Vorkommnisse von »PIN_LED« im Code mit der Zahl 13. */  
-#define PIN_LED 13
+// Die globale Variable enthält die Pin-Nummer, an der die LED angeschlossen wird.
+// Globale Konstanten werden i.d.R. groß geschrieben.
+constexpr byte PIN_LED = 13;
 
-// Die SETUP-Funktion wird einmalig beim Start des Microcontrollers ausgeführt
+// Die SETUP-Funktion wird einmalig beim Start des Mikrocontrollers ausgeführt
 void setup() {
     
     // definiert den Zweck eine PINs, Eingang (INPUT) oder Ausgang (OUTPUT)
     pinMode(PIN_LED, OUTPUT);
 }
 
-// Die LOOP-Funktion läuft als Endlosschleife auf dem Microcontroller
+// Die LOOP-Funktion läuft als Endlosschleife auf dem Mikrocontroller
 void loop() {
   
   // versetzt einen PIN in einen elektrischen Zustand, hier »Strom Ein«
